@@ -1,4 +1,5 @@
 using DevBlogs.Web.Data;
+using DevBlogs.Web.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +9,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DevBlogDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DevBlog")));
 
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
