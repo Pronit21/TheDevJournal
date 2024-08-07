@@ -1,11 +1,13 @@
 ﻿using DevBlogs.Web.Models.Domain;
 using DevBlogs.Web.Models.ViewModels;
 using DevBlogs.Web.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevBlogs.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminBlogPostsController : Controller
     {
         private readonly ITagRepository tagRepository;

@@ -6,7 +6,7 @@ namespace DevBlogs.Web.Data
 {
     public class DevBlogDbContext : DbContext
     {
-        public DevBlogDbContext(DbContextOptions options) : base(options)
+        public DevBlogDbContext(DbContextOptions<DevBlogDbContext> options) : base(options)
         {
         }
 

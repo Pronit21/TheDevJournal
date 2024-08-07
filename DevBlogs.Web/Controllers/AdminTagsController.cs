@@ -2,11 +2,13 @@
 using DevBlogs.Web.Models.Domain;
 using DevBlogs.Web.Models.ViewModels;
 using DevBlogs.Web.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DevBlogs.Web.Controllers
 {
+	[Authorize(Roles = "Admin")]
 	public class AdminTagsController : Controller
 	{
         private readonly ITagRepository tagRepository;
@@ -20,6 +22,7 @@ namespace DevBlogs.Web.Controllers
 			return View("Main");
 		}
 
+		[Authorize]
 		[HttpGet]
 		public IActionResult Add()
 		{
