@@ -51,10 +51,10 @@ namespace DevBlogs.Web.Data
             var superAdminId = "b32db998-a68c-4c86-8a38-8a7906913851";
             var superAdminUser = new IdentityUser
             {
-                UserName = "superadmin@bloggie.com",
-                Email = "superadmin@bloggie.com",
-                NormalizedEmail = "superadmin@bloggie.com".ToUpper(),
-                NormalizedUserName = "superadmin@bloggie.com".ToUpper(),
+                UserName = "superadmin",
+                Email = "superadmin@devblog.com",
+                NormalizedEmail = "superadmin@devblog.com".ToUpper(),
+                NormalizedUserName = "superadmin".ToUpper(),
                 Id = superAdminId
             };
 

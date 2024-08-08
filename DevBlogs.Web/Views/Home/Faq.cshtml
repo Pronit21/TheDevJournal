@@ -1,0 +1,100 @@
+﻿
+  
+    <style>
+    body {
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        --gap: 5em;
+        --line: 1px;
+        --color: rgba(255, 255, 255, 0.2);
+        background-image: linear-gradient(-90deg, transparent calc(var(--gap) - var(--line)), var(--color) calc(var(--gap) - var(--line) + 1px), var(--color) var(--gap)), linear-gradient(0deg, transparent calc(var(--gap) - var(--line)), var(--color) calc(var(--gap) - var(--line) + 1px), var(--color) var(--gap));
+        background-size: var(--gap) var(--gap);
+    }
+
+    .faq-section {
+        padding: 50px 0;
+        color: #fff;
+    }
+
+    .jumbotron {
+        background-color: transparent;
+        color: #fff;
+    }
+
+        .jumbotron h1 {
+            color: #de8512;
+        }
+
+    .accordion .accordion-item {
+        background-color: transparent;
+        border-color: #de8512;
+    }
+
+    .accordion .accordion-header {
+        background-color: #2c2c2c;
+        border-color: #de8512;
+    }
+
+        .accordion .accordion-header .accordion-button {
+            color: #de8512;
+            text-decoration: none;
+        }
+
+    .accordion .accordion-body {
+        background-color: transparent;
+        color: #fff;
+    }
+    </style>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Frequently Asked Questions</h1>
+            <p class="lead">Find answers to your questions about The Dev Journal.</p>
+        </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Latest Articles
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Stay updated with our latest articles.</strong> Here you will find in-depth articles on the latest trends, best practices, and emerging technologies in the world of development. Our expert authors share their knowledge and insights to help you stay ahead in your career.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Tutorials and Guides
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Learn new skills with our tutorials and guides.</strong> Whether you are a beginner or an experienced developer, our step-by-step tutorials and comprehensive guides are designed to help you learn new technologies and improve your skills. Explore various programming languages, frameworks, and tools through our curated content.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Community Discussions
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Join the conversation in our community discussions.</strong> Engage with fellow developers, ask questions, share your experiences, and collaborate on projects. Our community section is the perfect place to connect with like-minded individuals and expand your network.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+   
+</body>

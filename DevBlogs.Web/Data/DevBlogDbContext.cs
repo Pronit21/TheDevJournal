@@ -14,8 +14,14 @@ namespace DevBlogs.Web.Data
         {
             public DevBlogDbContext CreateDbContext(string[] args)
             {
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+               .SetBasePath(Directory.GetCurrentDirectory())
+               .AddJsonFile("appsettings.json")
+               .Build();
+
                 var optionsBuilder = new DbContextOptionsBuilder<DevBlogDbContext>();
-                optionsBuilder.UseSqlServer("Server=DESKTOP-J493CPQ\\SQLEXPRESS; Database=DevBlogDB; Trusted_Connection=True; MultipleActiveResultSets=true; TrustServerCertificate=True");
+                var connectionString = configuration.GetConnectionString("DevBlog");
+                optionsBuilder.UseSqlServer(connectionString);
 
                 return new DevBlogDbContext(optionsBuilder.Options);
             }

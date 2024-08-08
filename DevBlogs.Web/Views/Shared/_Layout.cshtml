@@ -27,10 +27,12 @@
                             <a class="nav-link custom-nav-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom-nav-item" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                            <a class="nav-link custom-nav-item" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
-                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-                        {
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-item" asp-area="" asp-controller="Home" asp-action="Faq">Faq</a>
+                        </li>
+                        
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Admin
@@ -84,7 +86,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        }
+                        
                     </ul>
 
                     <div class="d-flex align-items-center">
@@ -104,13 +106,17 @@
 						}
 						else
 						{
-							<a class="btn me-3 bg-light text-dark"
-							   asp-area=""
-							   asp-action="Login"
-							   asp-controller="Account">
-								Login
-							</a>
-							<a class="btn me-3 bg-light text-dark"
+
+
+                            <a class="btn btn-outline-warning me-3 text-white"
+                                asp-area=""
+                                asp-action="Login"
+                                asp-controller="Account">
+                                  Login
+                            </a>
+
+
+                            <a class="btn btn-outline-warning me-3 text-white"
 							   asp-area=""
 							   asp-action="Register"
 							   asp-controller="Account">

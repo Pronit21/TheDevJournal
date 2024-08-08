@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 
+
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: auto;
     font-family: sans-serif;
     background: #000;
     color: #fff;
     align-content: center;
+    width: 100%;
+    height: 100%;
+    
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient( -90deg, transparent calc(var(--gap) - var(--line)), var(--color) calc(var(--gap) - var(--line) + 1px), var(--color) var(--gap) ), linear-gradient( 0deg, transparent calc(var(--gap) - var(--line)), var(--color) calc(var(--gap) - var(--line) + 1px), var(--color) var(--gap) );
+    background-size: var(--gap) var(--gap);
 }
 
 /* styles.css */
@@ -20,9 +27,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust the transparency as needed */
     transition: background-color 0.5s ease;
 }
-
-
-
 
 p {
     font-size: 4rem;
@@ -61,6 +65,8 @@ p {
 .navbar-brand:hover {
     color: #de8512;
 }
+
+
 
 
 
