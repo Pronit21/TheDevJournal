@@ -40,7 +40,7 @@ namespace DevBlogs.Web.Controllers
                 if (roleIdentityResult.Succeeded)
                 {
                     //Show success notification
-                    return RedirectToAction("Register");
+                    return RedirectToAction("Login");
 
                 }
 
